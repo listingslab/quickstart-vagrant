@@ -1,0 +1,33 @@
+{
+  "name": "aligent/quickstart",
+  "description": "Quickstart Vagrant Magento",
+  "authors": [
+    {
+      "name": "Chris Dorward",
+      "email": "chris.dorward@aligent.com.au"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/EcomDev/checkitout"
+    },
+    {
+      "type": "composer",
+      "url": "https://packages.firegento.com"
+    }
+
+  ],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "2.1.*",
+    "magento-hackathon/composer-command-integrator": "*",
+    "EcomDev/checkitout": "^1.5"
+  },
+  "require-dev": {
+  },
+  "extra": {
+    "magento-root-dir": "./magento_ce",
+    "magento-deploystrategy": "symlink",
+    "magento-force": "override"
+  }
+}
