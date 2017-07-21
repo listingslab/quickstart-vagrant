@@ -27,10 +27,6 @@ apt-get -y update
 # Install MySQL Server 5.6
 /vagrant/provision/database/mysql-server-5.6.sh
 
-# Install Magento
-# better to do this manually using ./utils/m98-magerun.phar
-#/vagrant/provision/magerun/install.sh
-
 service apache2 restart
 
 # Success
