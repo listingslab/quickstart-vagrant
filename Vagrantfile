@@ -15,15 +15,12 @@ Vagrant.configure("2") do |config|
 
     # Private network which allows host-only access to the machine on a specific IP.
     config.vm.network :private_network, ip: "192.168.56.56"
-    config.vm.host_name = "local." + PROJECT_NAME + ".dev"
-    config.hostmanager.enabled = true
-    config.hostmanager.manage_host = true
-    config.hostmanager.ignore_private_ip = false
-    config.hostmanager.include_offline = true
+    #config.vm.host_name = "local." + PROJECT_NAME + ".dev"
+    #config.hostmanager.enabled = true
+    #config.hostmanager.manage_host = true
+    #config.hostmanager.ignore_private_ip = false
+    #config.hostmanager.include_offline = true
 
-    config.vm.provider :virtualbox do |vb|
-        vb.customize ["modifyvm", :id, "--memory", "2048"]
-    end
 
     # Vagrant v1.1+ (http://jeremykendall.net/2013/08/09/vagrant-synced-folders-permissions/)
     config.vm.synced_folder "./magento", "/magento", id: "vagrant-root",
